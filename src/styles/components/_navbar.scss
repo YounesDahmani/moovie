@@ -1,0 +1,72 @@
+.navbar {
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25px 40px;
+  min-width: 100%;
+  z-index: 9999999;
+  .left-part {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    min-width: 70%;
+    .navbar-logo {
+      a,
+      a:visited {
+        cursor: pointer;
+        font-size: 2rem;
+        font-family: $logo;
+        color: $color-2;
+      }
+    }
+    .header-menu {
+      padding-left: 50px;
+      width: 40%;
+      ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        a,
+        a:visited {
+          cursor: pointer;
+          font-size: 1rem;
+          font-family: $font-2;
+          color: $color-3;
+          transition: 0.4s ease-in-out;
+
+          &:hover {
+            color: rgb(154, 154, 154);
+          }
+        }
+      }
+    }
+  }
+
+  .right-part {
+    display: flex;
+    align-items: center;
+
+    .search {
+      span {
+        cursor: pointer;
+        color: white;
+      }
+    }
+
+    .user-icon {
+      padding-left: 50px;
+      span {
+        cursor: pointer;
+        color: white;
+      }
+    }
+  }
+}
+
+.yeah {
+  cursor: default !important;
+  font-family: $font-1 !important;
+  color: $color-1 !important;
+}

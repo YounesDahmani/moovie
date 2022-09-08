@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 
 const Browse = () => {
   return (
-    <div>
-      <Header />
+    <div className="browse">
+      <Navbar />
       <p>Browse</p>
     </div>
   );

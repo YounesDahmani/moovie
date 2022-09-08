@@ -7,11 +7,11 @@ const App = () => {
     <div className="app">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/browse" element={<Browse />} />
-          <Route path="/browse/series" element={<Series />} />
-          <Route path="/browse/films" element={<Moovie />} />
-          <Route path="/browse/my-list" element={<MyList />} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/browse" element={<Browse />} />
+          <Route exact path="/series" element={<Series />} />
+          <Route exact path="/films" element={<Moovie />} />
+          <Route exact path="/my-list" element={<MyList />} />
         </Routes>
       </BrowserRouter>
     </div>
