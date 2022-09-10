@@ -10,9 +10,15 @@ const Browse = () => {
       <Navbar />
       <Header />
       <Rows title="Trending this week" fetchUrl={requests.fetchTrending} />
-      <Rows title="Trending this day" fetchUrl={requests.fetchTrending} />
-      <Rows title="Trending this day" fetchUrl={requests.fetchTrending} />
-      <Rows title="Trending this day" fetchUrl={requests.fetchTrending} />
+      <Rows title="Top Rated" fetchUrl={requests.fetchTopRated} />
+      <Rows title="Action Movies" fetchUrl={requests.fetchActionMovies} />
+      <Rows title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+      <Rows title="Romance" fetchUrl={requests.fetchRomanceMovies} />
+      <Rows title="Documentaries" fetchUrl={requests.fetchHorrorMovies} />
+      <Rows
+        title="Science-Fiction Movies"
+        fetchUrl={requests.fetchScienceFictionMovies}
+      />
       <div className="moovie-container"></div>
     </div>
   );

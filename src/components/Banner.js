@@ -5,6 +5,7 @@ import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import requests from "../config/Requests";
 import axios from "axios";
+import QuickView from "./QuickView";
 
 const Banner = () => {
   const [movie, setMovie] = useState([]);
@@ -53,13 +54,19 @@ const Banner = () => {
                 <PlayArrowIcon /> Play
               </button>
             </NavLink>
-            <button className="banner__button">
+            <button className="banner__button" onClick={handlePopup}>
               <InfoOutlinedIcon />
               More infos
             </button>
           </div>
         )}
       </div>
+      <QuickView
+        bannerStyle={bannerStyle}
+        movie={movie}
+        popupStatus={popup}
+        popup={handlePopup}
+      />
     </header>
   );
 };
