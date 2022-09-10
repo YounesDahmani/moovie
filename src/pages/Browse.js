@@ -10,9 +10,9 @@ const Browse = () => {
       <Navbar />
       <Header />
       <Rows title="Trending this week" fetchUrl={requests.fetchTrending} />
-      <Rows title="Trending this day" />
-      <Rows title="Trending this day" />
-      <Rows title="Trending this day" />
+      <Rows title="Trending this day" fetchUrl={requests.fetchTrending} />
+      <Rows title="Trending this day" fetchUrl={requests.fetchTrending} />
+      <Rows title="Trending this day" fetchUrl={requests.fetchTrending} />
       <div className="moovie-container"></div>
     </div>
   );
