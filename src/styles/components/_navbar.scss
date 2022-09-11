@@ -1,72 +1,103 @@
-.navbar {
+.nav {
   display: flex;
-  position: fixed;
-  flex-direction: row;
+  align-items: center;
   justify-content: space-between;
-  padding: 25px 40px;
-  min-width: 100%;
-  z-index: 9999999;
-  .left-part {
+  flex-wrap: wrap;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  padding: 12px 4%;
+  font-size: 0.9rem;
+  color: #fff;
+  background: linear-gradient(
+    to bottom,
+    rgba(74, 74, 74, 0.6),
+    rgba(0, 0, 0, 0)
+  );
+  transition: background-color 0.3s ease-in-out;
+  h2 {
+    font-size: 2rem;
+    .blue {
+      color: rgb(103, 189, 243);
+    }
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &--black {
+    background-color: $background-color;
+  }
+
+  &__burger {
+    cursor: pointer;
+    color: #fff;
+    background-color: transparent;
+    margin-right: 1rem;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__logo {
+    max-width: 80px;
+    @media screen and (min-width: 768px) {
+      max-width: 100px;
+    }
+  }
+
+  &__links ul {
+    margin-left: 20px;
     display: flex;
-    align-items: center;
     flex-direction: row;
-    min-width: 70%;
-    .navbar-logo {
-      a,
-      a:visited {
-        cursor: pointer;
-        font-size: 2rem;
-        font-family: $logo;
-        color: $color-2;
-      }
-    }
-    .header-menu {
-      padding-left: 50px;
-      width: 40%;
-      ul {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        a,
-        a:visited {
-          cursor: pointer;
-          font-size: 1rem;
-          font-family: $font-2;
-          color: $color-3;
-          transition: 0.4s ease-in-out;
 
-          &:hover {
-            color: rgb(154, 154, 154);
-          }
-        }
+    transition: background-color 0.3s ease-in-out;
+
+    .nav__link ul {
+      text-decoration: none;
+      padding: 5px 10px;
+    }
+    li {
+      padding: 0px 20px;
+    }
+    @media screen and (max-width: 767.98px) {
+      margin-left: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 110%;
+      right: 0;
+
+      .show & {
+        display: flex;
+        flex-direction: column;
+        visibility: visible;
+        width: 100%;
+        height: calc(100vh - 50px);
+        top: 50px;
+        background-color: #000;
+      }
+
+      .nav__link {
+        font-size: 1.2rem;
+        padding: 15px 4%;
       }
     }
   }
 
-  .right-part {
+  &__actions {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    flex: 1;
 
-    .search {
-      span {
-        cursor: pointer;
-        color: white;
-      }
-    }
+    .nav__action {
+      margin-left: 10px;
 
-    .user-icon {
-      padding-left: 50px;
-      span {
-        cursor: pointer;
-        color: white;
+      @media screen and (min-width: 768px) {
+        margin-left: 20px;
       }
     }
   }
-}
-
-.yeah {
-  cursor: default !important;
-  font-family: $font-1 !important;
-  color: $color-1 !important;
 }

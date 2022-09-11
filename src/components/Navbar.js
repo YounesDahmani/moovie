@@ -1,52 +1,75 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import SearchIcon from "@mui/icons-material/Search";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar = () => {
-  return (
-    <div className="navbar">
-      <div className="left-part">
-        <div className="navbar-logo">
-          <NavLink to="/browse">
-            <p>Movie App</p>
-          </NavLink>
-        </div>
-        <div className="header-menu">
-          <ul>
-            <NavLink
-              to="/browse"
-              className={({ isActive }) => (isActive ? "yeah" : "")}
-            >
-              <li>Accueil</li>
-            </NavLink>
-            <NavLink
-              to="/series"
-              className={({ isActive }) => (isActive ? "yeah" : "")}
-            >
-              <li>Séries</li>
-            </NavLink>
-            <NavLink
-              to="/films"
-              className={({ isActive }) => (isActive ? "yeah" : "")}
-            >
-              <li>Films</li>
-            </NavLink>
-            <NavLink
-              to="/my-list"
-              className={({ isActive }) => (isActive ? "yeah" : "")}
-            >
-              <li>Ma liste</li>
-            </NavLink>
-          </ul>
-        </div>
-      </div>
+  const [navBlack, setNavBlack] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(false);
 
-      <div className="right-part">
-        <div className="search">
-          <span class="material-symbols-outlined">search</span>
-        </div>
-        <div className="user-icon">
-          <span class="material-symbols-outlined">person</span>
-        </div>
+  const transitionNav = () => {
+    window.scrollY > 100 ? setNavBlack(true) : setNavBlack(false);
+  };
+
+  useState(() => {
+    document.addEventListener("scroll", transitionNav);
+  });
+
+  const handleClick = () => {
+    console.log(toggleMenu);
+    toggleMenu ? setToggleMenu(false) : setToggleMenu(true);
+  };
+
+  return (
+    <div
+      className={`nav ${
+        navBlack || toggleMenu ? "nav--black" : "nav--transparent"
+      } ${toggleMenu && "show"}`}
+    >
+      <button className="nav__burger" onClick={handleClick}>
+        <MenuIcon />
+      </button>
+      <NavLink
+        to="/browse"
+        className={({ isActive }) => (isActive ? "yeah" : "")}
+      >
+        <h2>
+          <span className="blue">Moovie </span> App
+        </h2>
+      </NavLink>
+
+      <nav className="nav__links">
+        <ul>
+          <NavLink
+            to="/browse"
+            className={({ isActive }) => (isActive ? "yeah" : "")}
+          >
+            <li className="nav__link">Accueil</li>
+          </NavLink>
+          <NavLink
+            to="/series"
+            className={({ isActive }) => (isActive ? "yeah" : "")}
+          >
+            <li className="nav__link">Séries</li>
+          </NavLink>
+          <NavLink
+            to="/films"
+            className={({ isActive }) => (isActive ? "yeah" : "")}
+          >
+            <li className="nav__link">Films</li>
+          </NavLink>
+          <NavLink
+            to="/my-list"
+            className={({ isActive }) => (isActive ? "yeah" : "")}
+          >
+            <li className="nav__link">Ma liste</li>
+          </NavLink>
+        </ul>
+      </nav>
+      <div className="nav__actions">
+        <a href="/" className="nav__action">
+          <SearchIcon />
+        </a>
       </div>
     </div>
   );
