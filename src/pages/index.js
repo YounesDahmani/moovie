@@ -3,3 +3,4 @@ export { default as Home } from "./Home";
 export { default as Series } from "./Series";
 export { default as Moovie } from "./Moovie";
 export { default as MyList } from "./MyList";
+export { default as Search } from "./Search";

@@ -29,10 +29,8 @@ const Navbar = () => {
       <button className="nav__burger" onClick={handleClick}>
         <MenuIcon />
       </button>
-      <NavLink
-        to="/browse"
-        className={({ isActive }) => (isActive ? "yeah" : "")}
-      >
+
+      <NavLink to="/browse">
         <h2>
           <span className="blue">Moovie </span> App
         </h2>
@@ -67,9 +65,9 @@ const Navbar = () => {
         </ul>
       </nav>
       <div className="nav__actions">
-        <a href="/" className="nav__action">
+        <NavLink to="/search">
           <SearchIcon />
-        </a>
+        </NavLink>
       </div>
     </div>
   );

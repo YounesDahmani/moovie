@@ -17,12 +17,14 @@
   transition: background-color 0.3s ease-in-out;
   h2 {
     font-size: 2rem;
+    font-family: $logo;
     .blue {
       color: rgb(103, 189, 243);
     }
   }
   a {
     color: #fff;
+    font-family: $font-2;
     text-decoration: none;
   }
 
@@ -49,7 +51,7 @@
   }
 
   &__links ul {
-    margin-left: 20px;
+    margin-left: 40px;
     display: flex;
     flex-direction: row;
 
@@ -91,7 +93,9 @@
     align-items: center;
     justify-content: flex-end;
     flex: 1;
-
+    svg {
+      cursor: pointer;
+    }
     .nav__action {
       margin-left: 10px;
 
@@ -100,4 +104,9 @@
       }
     }
   }
+}
+
+.yeah {
+  color: white !important;
+  font-family: $font-1 !important;
 }
