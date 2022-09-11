@@ -3,11 +3,10 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
-import requests from "../config/Requests";
 import axios from "axios";
 import QuickView from "./QuickView";
 
-const Banner = () => {
+const Banner = ({ fetchUrl }) => {
   const [movie, setMovie] = useState([]);
   const [popup, setPopup] = useState(false);
 
@@ -17,7 +16,7 @@ const Banner = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const request = await axios.get(requests.fetchTrending);
+      const request = await axios.get(fetchUrl);
 
       setMovie(
         request.data.results[
@@ -26,7 +25,7 @@ const Banner = () => {
       );
     }
     fetchData();
-  }, []);
+  }, [fetchUrl]);
 
   const truncateText = (string, n) => {
     return string?.length > n ? string.substr(0, n - 1) + "..." : string;

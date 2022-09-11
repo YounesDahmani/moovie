@@ -5,12 +5,17 @@ const requests = {
   // Movies
 
   fetchTrending: `${baseURL}/trending/all/week?api_key=${API_KEY}`,
+  fetchMovieTrending: `${baseURL}/trending/movie/week?api_key=${API_KEY}`,
   fetchTopRated: `${baseURL}/movie/top_rated?api_key=${API_KEY}&language=en-US`,
   fetchActionMovies: `${baseURL}/discover/movie?api_key=${API_KEY}&width_genres=28`,
+  fetchAdventureMovies: `${baseURL}/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=12&with_watch_monetization_types=flatrate`,
+  fetchMysteryMovies: `${baseURL}/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=9648&with_watch_monetization_types=flatrate`,
+
   fetchComedyMovies: `${baseURL}/discover/movie?api_key=${API_KEY}&width_genres=35`,
-  fetchHorrorMovies: `${baseURL}/discover/movie?api_key=${API_KEY}&width_genres=27`,
+  fetchHorrorMovies: `${baseURL}/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=27&with_watch_monetization_types=flatrate`,
   fetchDocumentaries: `${baseURL}/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=99&with_watch_monetization_types=flatrate`,
-  fetchScienceFictionMovies: `${baseURL}/discover/movie?api_key=${API_KEY}&width_genres=878`,
+  fetchHistory: `${baseURL}/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=36&with_watch_monetization_types=flatrate`,
+  fetchScienceFictionMovies: `${baseURL}/discover/movie?api_key=${API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=878&with_watch_monetization_types=flatrate`,
 
   // TV
 

@@ -7,7 +7,7 @@ const Navbar = () => {
       <div className="left-part">
         <div className="navbar-logo">
           <NavLink to="/browse">
-            <p>CR7 App</p>
+            <p>Movie App</p>
           </NavLink>
         </div>
         <div className="header-menu">

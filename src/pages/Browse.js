@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Header from "../components/Banner";
+import Banner from "../components/Banner";
 import Rows from "../components/Rows";
 import requests from "../config/Requests";
 
@@ -8,7 +8,7 @@ const Browse = () => {
   return (
     <div className="browse">
       <Navbar />
-      <Header />
+      <Banner fetchUrl={requests.fetchTrending} />
       <Rows title="Trending this week" fetchUrl={requests.fetchTrending} />
       <Rows title="Top Rated" fetchUrl={requests.fetchTopRated} />
       <Rows title="Popular TV Show" fetchUrl={requests.fetchTvPopular} />

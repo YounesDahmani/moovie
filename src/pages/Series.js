@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import Header from "../components/Banner";
+import Banner from "../components/Banner";
 import Rows from "../components/Rows";
 import requests from "../config/Requests";
 const Series = () => {
   return (
     <div className="series">
       <Navbar />
-      <Header />
+      <Banner fetchUrl={requests.fetchTvTrending} />
       <Rows title="Trending this week" fetchUrl={requests.fetchTvTrending} />
       <Rows title="Top Rated" fetchUrl={requests.fetchTvTopRated} />
       <Rows title="For Children" fetchUrl={requests.fetchTvChildren} />
