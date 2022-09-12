@@ -35,7 +35,11 @@ const Search = () => {
         {moviesData.slice(0, 12).map((movie) => (
           <div className="poster" key={movie.id}>
             <img
-              src={`${baseUrl}/${movie.poster_path}`}
+              src={
+                movie.poster_path
+                  ? `${baseUrl}/${movie.poster_path}`
+                  : "./assets/img/poster.jpg"
+              }
               className="row__image"
               alt={movie?.title || movie?.name || movie?.original_title}
             />
