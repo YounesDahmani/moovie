@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Banner from "../components/Banner";
 import Rows from "../components/Rows";
 import requests from "../config/Requests";
+import Footer from "../components/Footer";
 const Series = () => {
   return (
     <div className="series">
@@ -15,6 +16,7 @@ const Series = () => {
       <Rows title="Talk Show" fetchUrl={requests.fetchTalkShow} />
       <Rows title="Mini Series" fetchUrl={requests.fetchMiniSeries} />
       <Rows title="Documentary" fetchUrl={requests.fetchTvDocumentary} />
+      <Footer />
     </div>
   );
 };

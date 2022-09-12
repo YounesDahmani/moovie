@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Banner from "../components/Banner";
 import Rows from "../components/Rows";
 import requests from "../config/Requests";
+import Footer from "../components/Footer";
 
 const Browse = () => {
   return (
@@ -16,6 +17,7 @@ const Browse = () => {
       <Rows title="Action Movies" fetchUrl={requests.fetchActionMovies} />
       <Rows title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
       <Rows title="For Children" fetchUrl={requests.fetchTvChildren} />
+      <Footer />
     </div>
   );
 };

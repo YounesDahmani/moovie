@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
 const Search = () => {
@@ -46,6 +47,7 @@ const Search = () => {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };
