@@ -12,8 +12,9 @@ const Browse = () => {
       <Banner fetchUrl={requests.fetchTrending} />
       <Rows title="Trending this week" fetchUrl={requests.fetchTrending} />
       <Rows title="Top Rated" fetchUrl={requests.fetchTopRated} />
-      <Rows title="Popular TV Show" fetchUrl={requests.fetchTvPopular} /> */
-      <Rows title="Action Movies" fetchUrl={requests.fetchActionMovies} />
+      <Rows title="Popular TV Show" fetchUrl={requests.fetchTvPopular} />
+      <Rows title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
+      <Rows title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
       <Footer />
     </div>
   );
