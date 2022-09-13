@@ -30,7 +30,7 @@ const Navbar = () => {
         <MenuIcon />
       </button>
 
-      <NavLink to="/browse">
+      <NavLink to="/">
         <h2>
           <span className="blue">Moovie </span> App
         </h2>
@@ -39,7 +39,7 @@ const Navbar = () => {
       <nav className="nav__links">
         <ul>
           <NavLink
-            to="/browse"
+            to="/"
             className={({ isActive }) => (isActive ? "yeah" : "")}
           >
             <li className="nav__link">Accueil</li>

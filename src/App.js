@@ -11,7 +11,6 @@ const App = () => {
         <ScrollToTop />
         <Routes>
           <Route exact path="/" element={<Browse />} />
-          <Route exact path="/browse" element={<Browse />} />
           <Route exact path="/series" element={<Series />} />
           <Route exact path="/films" element={<Moovie />} />
           <Route exact path="/search" element={<Search />} />
