@@ -28,8 +28,6 @@ const Search = () => {
             id="search-input"
             onChange={(e) => setSearch(e.target.value)}
           />
-
-          <input type="submit" value="" />
         </form>
       </div>
       <div className="result">

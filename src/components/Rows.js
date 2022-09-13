@@ -28,6 +28,7 @@ const Rows = ({ title, fetchUrl }) => {
               }
               className="row__image"
               alt={movie?.title || movie?.name || movie?.original_title}
+              loading="lazy"
             />
           </div>
         ))}

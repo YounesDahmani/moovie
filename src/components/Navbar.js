@@ -56,12 +56,6 @@ const Navbar = () => {
           >
             <li className="nav__link">Films</li>
           </NavLink>
-          <NavLink
-            to="/my-list"
-            className={({ isActive }) => (isActive ? "yeah" : "")}
-          >
-            <li className="nav__link">Ma liste</li>
-          </NavLink>
         </ul>
       </nav>
       <div className="nav__actions">

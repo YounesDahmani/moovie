@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import axios from "axios";
@@ -46,19 +45,18 @@ const Banner = ({ fetchUrl }) => {
         <p className="banner__description">
           {truncateText(movie?.overview, 100)}
         </p>
-        {movie.id && (
+        {/* {movie.id && (
           <div className="banner__buttons">
-            <NavLink to={`/video/${movie?.id}`}>
-              <button className="banner__button banner__button--play">
-                <PlayArrowIcon /> Play
-              </button>
-            </NavLink>
+            <button className="banner__button banner__button--play">
+              <PlayArrowIcon /> Play
+            </button>
+
             <button className="banner__button" onClick={handlePopup}>
               <InfoOutlinedIcon />
               More infos
             </button>
           </div>
-        )}
+        )} */}
       </div>
       <QuickView
         bannerStyle={bannerStyle}
