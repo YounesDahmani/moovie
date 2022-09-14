@@ -14,11 +14,11 @@ const Moovie = () => {
       <Rows title="Trending this week" fetchUrl={requests.fetchMovieTrending} />
       <Rows title="Top Rated" fetchUrl={requests.fetchTopRated} />
       <Rows title="Horror" fetchUrl={requests.fetchHorrorMovies} />
-      <Rows
+      {/* <Rows
         title="Science Fiction"
         fetchUrl={requests.fetchScienceFictionMovies}
-      />
-      <Rows title="Adventure" fetchUrl={requests.fetchAdventureMovies} />
+      /> */}
+
       {/* <Rows title="Mystery" fetchUrl={requests.fetchMysteryMovies} />
       <Rows title="History" fetchUrl={requests.fetchHistory} /> */}
 

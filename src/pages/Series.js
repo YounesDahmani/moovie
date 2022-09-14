@@ -12,8 +12,8 @@ const Series = () => {
       <Rows title="Trending this week" fetchUrl={requests.fetchTvTrending} />
       <Rows title="Top Rated" fetchUrl={requests.fetchTvTopRated} />
       <Rows title="For Children" fetchUrl={requests.fetchTvChildren} />
-      <Rows title="Popular TV Show" fetchUrl={requests.fetchTvPopular} />
-      <Rows title="Talk Show" fetchUrl={requests.fetchTalkShow} />
+      {/* <Rows title="Popular TV Show" fetchUrl={requests.fetchTvPopular} /> */}
+
       {/* <Rows title="Mini Series" fetchUrl={requests.fetchMiniSeries} />
       <Rows title="Documentary" fetchUrl={requests.fetchTvDocumentary} /> */}
       <Footer />

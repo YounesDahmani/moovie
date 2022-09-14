@@ -18,7 +18,7 @@ const Rows = ({ title, fetchUrl }) => {
     <div className="row">
       <h2 className="row__title">{title}</h2>
       <div className="row__images">
-        {movies.slice(0, 9).map((movie) => (
+        {movies.slice(0, 6).map((movie) => (
           <div key={movie.id}>
             <img
               src={

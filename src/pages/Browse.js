@@ -13,8 +13,8 @@ const Browse = () => {
       <Rows title="Trending this week" fetchUrl={requests.fetchTrending} />
       <Rows title="Top Rated" fetchUrl={requests.fetchTopRated} />
       <Rows title="Popular TV Show" fetchUrl={requests.fetchTvPopular} />
-      <Rows title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-      <Rows title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+      {/* <Rows title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} /> */}
+
       <Footer />
     </div>
   );
