@@ -19,8 +19,8 @@ const Moovie = () => {
         fetchUrl={requests.fetchScienceFictionMovies}
       />
       <Rows title="Adventure" fetchUrl={requests.fetchAdventureMovies} />
-      <Rows title="Mystery" fetchUrl={requests.fetchMysteryMovies} />
-      <Rows title="History" fetchUrl={requests.fetchHistory} />
+      {/* <Rows title="Mystery" fetchUrl={requests.fetchMysteryMovies} />
+      <Rows title="History" fetchUrl={requests.fetchHistory} /> */}
 
       <Footer />
     </div>

@@ -14,8 +14,8 @@ const Series = () => {
       <Rows title="For Children" fetchUrl={requests.fetchTvChildren} />
       <Rows title="Popular TV Show" fetchUrl={requests.fetchTvPopular} />
       <Rows title="Talk Show" fetchUrl={requests.fetchTalkShow} />
-      <Rows title="Mini Series" fetchUrl={requests.fetchMiniSeries} />
-      <Rows title="Documentary" fetchUrl={requests.fetchTvDocumentary} />
+      {/* <Rows title="Mini Series" fetchUrl={requests.fetchMiniSeries} />
+      <Rows title="Documentary" fetchUrl={requests.fetchTvDocumentary} /> */}
       <Footer />
     </div>
   );

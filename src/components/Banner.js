@@ -1,17 +1,17 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+// import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+// import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import axios from "axios";
-import QuickView from "./QuickView";
+// import QuickView from "./QuickView";
 
 const Banner = ({ fetchUrl }) => {
   const [movie, setMovie] = useState([]);
-  const [popup, setPopup] = useState(false);
+  // const [popup, setPopup] = useState(false);
 
-  const handlePopup = () => {
-    popup ? setPopup(false) : setPopup(true);
-  };
+  // const handlePopup = () => {
+  //   popup ? setPopup(false) : setPopup(true);
+  // };
 
   useEffect(() => {
     async function fetchData() {
@@ -58,12 +58,12 @@ const Banner = ({ fetchUrl }) => {
           </div>
         )} */}
       </div>
-      <QuickView
+      {/* <QuickView
         bannerStyle={bannerStyle}
         movie={movie}
         popupStatus={popup}
         popup={handlePopup}
-      />
+      /> */}
     </header>
   );
 };
